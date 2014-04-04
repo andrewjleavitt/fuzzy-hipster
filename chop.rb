@@ -23,5 +23,16 @@ def chop(target,sorted_array,count)
   end
 end
 
+t1 = Time.now
+# processing...
+t2 = Time.now
+delta = t2 - t1
+list = gen_list 100000000 # ~10 sec
+#list = Array(0..100000000) # ~3 sec
+t2 = Time.now
+delta = t2 - t1
+
+puts chop( 1 , list, 0)
+#puts chop(list.sample, list, 0)
+puts "Time to allocate " + delta.to_s
 list = gen_list 1000000000
-puts chop(list.sample, list, 1)
