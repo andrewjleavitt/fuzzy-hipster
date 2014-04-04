@@ -9,7 +9,7 @@ end
 
 def chop(target,sorted_array)
   cursor = (sorted_array.length/2).floor
-  puts sorted_array
+  # puts sorted_array
   puts "searching for " + target.to_s + " in list of " + sorted_array.length.to_s + " items."
   puts "value of cursor is " + cursor.to_s
   puts "value of array at cursor is: " + sorted_array[cursor].to_s
@@ -28,6 +28,6 @@ def chop(target,sorted_array)
 
 end
 
-list = gen_list 100000
+list = gen_list 10000000
 
 puts chop(list.sample, list)
